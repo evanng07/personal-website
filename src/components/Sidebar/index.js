@@ -2,8 +2,18 @@ import "./index.scss";
 import { Link, NavLink } from "react-router-dom";
 import LogoS from "../../assets/images/logo-ev.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faHome, faUser } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin, faGithub, faTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import {
+  faEnvelope,
+  faHome,
+  faUser,
+  faFolder,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faLinkedin,
+  faGithub,
+  faTwitter,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Sidebar = () => (
   <div className="nav-bar">
@@ -12,25 +22,43 @@ const Sidebar = () => (
       evanngo
     </Link>
     <nav>
-      <NavLink exact="true" activeclassname="active" to="/home">
-        <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
-      </NavLink>
-      <NavLink
-        exact="true"
-        activeclassname="active"
-        className="about-link"
-        to="/about"
-      >
-        <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
-      </NavLink>
-      <NavLink
-        exact="true"
-        activeclassname="active"
-        className="contact-link"
-        to="/contact"
-      >
-        <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
-      </NavLink>
+      <div className="icon">
+        <NavLink exact="true" activeclassname="active" to="/home">
+          <FontAwesomeIcon icon={faHome} size="lg" color="#4d4d4e" />
+        </NavLink>
+      </div>
+      <div className="icon">
+        <NavLink
+          exact="true"
+          activeclassname="active"
+          className="about-link"
+          to="/about"
+        >
+          <FontAwesomeIcon size="lg" icon={faUser} color="#4d4d4e" />
+        </NavLink>
+      </div>
+
+      <div className="icon">
+        <NavLink
+          exact="true"
+          activeclassname="active"
+          className="projects-link"
+          to="/projects"
+        >
+          <FontAwesomeIcon size="lg" icon={faFolder} color="#4d4d4e" />
+        </NavLink>
+      </div>
+
+      <div className="icon">
+        <NavLink
+          exact="true"
+          activeclassname="active"
+          className="contact-link"
+          to="/contact"
+        >
+          <FontAwesomeIcon size="lg" icon={faEnvelope} color="#4d4d4e" />
+        </NavLink>
+      </div>
     </nav>
 
     <ul>
@@ -46,21 +74,13 @@ const Sidebar = () => (
       </li>
       <li>
         {/* eslint-disable-next-line */}
-        <a
-          target="_blank"
-          rel="noreffer"
-          href="https://github.com/evanng07"
-        >
+        <a target="_blank" rel="noreffer" href="https://github.com/evanng07">
           <FontAwesomeIcon icon={faGithub} color="#4d4d4e" />
         </a>
       </li>
       <li>
         {/* eslint-disable-next-line */}
-        <a
-          target="_blank"
-          rel="noreffer"
-          href="https://twitter.com/EvanNg07"
-        >
+        <a target="_blank" rel="noreffer" href="https://twitter.com/EvanNg07">
           <FontAwesomeIcon icon={faTwitter} color="#4d4d4e" />
         </a>
       </li>
