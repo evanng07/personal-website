@@ -71,3 +71,5 @@ package.json
 
 # Ignore build folder
 build/
+
+.DS_Store

@@ -7,7 +7,7 @@ import Headshot from "../../assets/images/headshot.png";
 import AKPSI from "../../assets/images/akpsi.png";
 import HackUTD from "../../assets/images/hackutd.png";
 import JPMorgan from "../../assets/images/jpmorgan-icon.png";
-import EvanNgoResume from "../../assets/images/EvanNgoResume.pdf";
+import EvanNgoResume from "../../assets/images/EvanNgoResumeV2.pdf";
 import UTD from "../../assets/images/utd-logo.png";
 import "./index.scss";
 import MobileHome from "./MobileHome";
