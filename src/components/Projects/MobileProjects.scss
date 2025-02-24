@@ -1,0 +1,111 @@
+.mobile-projects-page {
+  padding: 20px;
+  width: 100%;
+  height: calc(100vh - 60px);
+  position: fixed;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+
+  .text-zone {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    
+    h1 {
+      color: #ffd700;
+      font-size: 32px;
+      font-family: 'Coolvetica';
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+
+  .project-card {
+    width: 90%;
+    margin: 0 auto;
+    background: #115173;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+
+    .project-image {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+
+    .multi-image-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 15px;
+
+      img {
+        width: 32%;
+        height: auto;
+        border-radius: 5px;
+      }
+    }
+
+    h2 {
+      color: #ffd700;
+      font-size: 24px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .date {
+      color: #fff;
+      font-size: 16px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .tech {
+      color: #fff;
+      font-size: 14px;
+      line-height: 1.5;
+      text-align: center;
+    }
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+    margin-bottom: 60px;
+
+    .nav-button {
+      background: transparent;
+      border: none;
+      color: #ffd700;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #fff;
+        transform: scale(1.1);
+      }
+    }
+
+    .project-counter {
+      color: #fff;
+      font-size: 16px;
+      font-family: 'Coolvetica';
+      min-width: 60px;
+      text-align: center;
+    }
+  }
+} 

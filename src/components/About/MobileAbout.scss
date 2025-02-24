@@ -1,0 +1,155 @@
+html, body {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-about-container {
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  max-width: 100vw;
+  margin: 0;
+  -webkit-overflow-scrolling: touch; // For smooth scrolling on iOS
+
+  .content-section {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0 auto;
+    text-align: center; // Center all text by default
+    padding-bottom: 60px; // Account for bottom navigation
+    
+    h1 {
+      color: #ffd700;
+      font-size: 32px;
+      font-family: 'Coolvetica';
+      margin-bottom: 20px;
+      white-space: normal;
+      text-align: center;
+      width: 100%;
+    }
+
+    h2 {
+      color: #ffd700;
+      font-size: 24px;
+      font-family: 'Coolvetica';
+      margin: 30px 0 20px 0;
+      white-space: normal;
+      text-align: center;
+      width: 100%;
+    }
+
+    .text-section {
+      width: 100%;
+      overflow-x: hidden;
+      
+      p {
+        color: #fff;
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 15px;
+        font-family: sans-serif;
+        padding-right: 10px;
+        white-space: normal;
+        word-wrap: break-word;
+        text-align: left; // Keep paragraph text left-aligned
+      }
+    }
+
+    .tech-stack {
+      width: 100%;
+      overflow-x: hidden;
+      padding: 0 10px;
+      box-sizing: border-box;
+      
+      .stack-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+        margin-bottom: 8px;
+        flex-wrap: nowrap;
+        width: 100%;
+        max-width: 100%;
+
+        .mini-card {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #fff;
+          border-radius: 5px;
+          width: 60px;
+          height: 60px;
+          padding: 6px;
+          flex-shrink: 0;
+
+          .tech-icon {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+
+    .cube-spinner {
+      margin-top: 30px;
+      height: 200px;
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      
+      .cubespinner {
+        transform: scale(0.5);
+      }
+    }
+  }
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 0 60px 0;
+  width: 100%;
+
+  a {
+    font-size: 30px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+}
+
+// Media query to handle different screen sizes
+@media screen and (max-width: 480px) {
+  .mobile-about-container {
+    padding: 15px;
+    
+    .content-section {
+      .tech-stack {
+        padding: 0 5px;
+        
+        .stack-row .mini-card {
+          width: 60px;
+          height: 60px;
+          
+          .tech-icon {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+} 

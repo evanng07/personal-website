@@ -1,0 +1,201 @@
+.container {
+  width: 100%;
+  will-change: contents;
+  height: 90%;
+  min-height: 566px;
+  position: absolute;
+  opacity: 0;
+  top: 5%;
+  margin: 0 auto;
+  z-index: 1;
+  transform-style: preserve-3d;
+}
+
+.projects-page {
+  .text-zone {
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    transform: translateY(-50%);
+    vertical-align: middle;
+    display: table-cell;
+    max-height: 90%;
+
+    h1 {
+      font-size: 53px;
+      font-family: "Coolvetica";
+      color: #ffd700;
+      font-weight: 400;
+      margin-top: 0;
+      position: relative;
+      margin-bottom: 40px;
+      left: 10px;
+
+      &::before {
+        content: "<h1>";
+        font-family: "La Belle Aurore";
+        font-size: 18px;
+        position: absolute;
+        margin-top: -10px;
+        left: -10px;
+        opacity: 0.6;
+        line-height: 18px;
+      }
+
+      &::after {
+        content: "</h1>";
+        font-family: "La Belle Aurore";
+        font-size: 18px;
+        position: absolute;
+        left: -30px;
+        bottom: -20px;
+        margin-left: 20px;
+        opacity: 0.6;
+        line-height: 18px;
+      }
+    }
+
+    p {
+      margin-top: 20px;
+      font-size: 17px;
+      color: #fff;
+      font-family: sans-serif;
+      font-weight: 300;
+      min-width: fit-content;
+      animation: pulse 1s;
+
+      &:nth-of-type(1) {
+        animation-delay: 1.2s;
+      }
+      &:nth-of-type(2) {
+        animation-delay: 1.3s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: 1.4s;
+      }
+    }
+  }
+
+  .text-animate-hover {
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .desktop-projects-page {
+    padding: 20px;
+    width: 60%;
+    height: 80%;
+    position: fixed;
+    box-sizing: border-box;
+    top: 20%;
+    left: 35%;
+    display: flex;
+    flex-direction: column;
+
+    .text-zone {
+      width: 100%;
+      text-align: center;
+
+      h1 {
+        color: #ffd700;
+        font-size: 32px;
+        font-family: "Coolvetica";
+        text-align: center;
+      }
+    }
+
+    .project-card {
+      width: 90%;
+      height: 85%;
+      max-width: 500px;
+      max-height: 400px;
+      margin: 0 auto;
+      background: #115173;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      // margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .project-image {
+        width: 90%;
+        height: 70%;
+        border-radius: 5px;
+      }
+
+      .multi-image-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 5px;
+
+        img {
+          width: 30%;
+          height: 250px;
+          border-radius: 5px;
+        }
+      }
+
+      h2 {
+        color: #ffd700;
+        font-size: 24px;
+        margin-bottom: 5px;
+        text-align: center;
+      }
+
+      .date {
+        color: #fff;
+        font-size: 16px;
+        margin-bottom: 5px;
+        text-align: center;
+      }
+
+      .tech {
+        color: #fff;
+        font-size: 14px;
+        line-height: 1.5;
+        text-align: center;
+      }
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 0 20px;
+      margin-top: 20px;
+      margin-bottom: 60px;
+
+      .nav-button {
+        background: transparent;
+        border: none;
+        color: #ffd700;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: #fff;
+          transform: scale(1.1);
+        }
+      }
+
+      .project-counter {
+        color: #fff;
+        font-size: 16px;
+        font-family: "Coolvetica";
+        min-width: 60px;
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,79 +1,255 @@
 .stage-cube-cont {
-    width: 50%;
-    height: 100%;
-    top: 0;
-    padding-top: 18%;
-    margin-left: 0;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  padding-top: 18%;
+  margin-left: 0;
+  position: absolute;
+  right: 0;
+}
+
+.tech-stack {
+  width: 100%;
+  justify-content: center;
+  margin-top: -10px;
+  &:nth-of-type(1) {
+    animation-delay: 1.5s;
+  }
+  &:nth-of-type(2) {
+    animation-delay: 1.3s;
+  }
+  &:nth-of-type(3) {
+    animation-delay: 1.4s;
+  }
+  .top-row {
+    align-items: flex-start;
+    display: flex;
+  }
+  .mid-row {
+    align-items: flex-start;
+    display: flex;
+    margin-top: 10px;
+    width: 87%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .bot-row {
+    align-items: flex-start;
+    display: flex;
+    margin-top: 10px;
+  }
+  .img-icon {
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    margin-top: 7px;
+  }
+  .img-icon-java {
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    display: flex;
+    margin-top: 8px;
+  }
+  .img-icon-c {
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    vertical-align: middle;
+    display: flex;
+    margin-top: 8px;
+    scale: 0.9;
+  }
+  .img-icon-python {
+    justify-content: center;
+    align-items: center;
+    margin-left: 3px;
+    margin-right: auto;
+    margin-top: 2px;
+    vertical-align: middle;
+    display: flex;
+    scale: 1.3;
+  }
+  .img-icon-js {
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    display: flex;
+    width: 45px;
+    height: 45px;
+    margin-top: 9px;
+    border-radius: 6px;
+  }
+  .img-icon-go {
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    display: flex;
+    width: 65px;
+    height: 65px;
+  }
+  .img-icon-html {
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    display: flex;
+    width: 45px;
+    height: 45px;
+    margin-top: 11px;
+  }
+  .img-icon-react {
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    margin-top: 7px;
+  }
+  .img-icon-pandas {
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    display: flex;
+    width: 65px;
+    height: 50px;
+    margin-top: 7px;
+  }
+  .img-icon-mongodb {
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    display: flex;
+    width: 55px;
+    height: 50px;
+    margin-top: 7px;
+  }
+  .img-icon-numpy {
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    display: flex;
+    width: 55px;
+    height: 50px;
+    margin-top: 7px;
+  }
+  .img-icon-aws {
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    display: flex;
+    width: 45px;
+    height: 30px;
+    margin-top: 19px;
+  }
+  .img-icon-postman {
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: auto;
+    vertical-align: middle;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    margin-top: 7px;
+  }
+  .img-icon-figma {
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    display: flex;
+    width: 35px;
+    height: 45px;
+    margin-top: 10px;
+  }
+}
+
+.cubespinner {
+  animation-name: spincube;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 12s;
+  transform-style: preserve-3d;
+  transform-origin: 100px 100px 0;
+  margin-left: calc(50% - 100px);
+
+  div {
     position: absolute;
-    right: 0;
-    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc;
+    background: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px 0px lightyellow;
   }
-  
-  .cubespinner {
-    animation-name: spincube;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-duration: 12s;
-    transform-style: preserve-3d;
-    transform-origin: 100px 100px 0;
-    margin-left: calc(50% - 100px);
-  
-    div {
-      position: absolute;
-      width: 200px;
-      height: 200px;
-      border: 1px solid #ccc;
-      background: rgba(255, 255, 255, 0.4);
-      text-align: center;
-      font-size: 100px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 0 20px 0px lightyellow;
-    }
-  
-    .face1 {
-      transform: translateZ(100px);
 
-    }
-    .face2 {
-      transform: rotateY(90deg) translateZ(100px);
-
-    }
-    .face3 {
-      transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
-
-    }
-    .face4 {
-      transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
-    }
-    .face5 {
-      transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
-    }
-    .face6 {
-      transform: rotateX(-90deg) translateZ(100px);
-      
-    }
+  .face1 {
+    transform: translateZ(100px);
   }
-  
-  @keyframes spincube {
-    from,
-    to {
-      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-    }
-    16% {
-      transform: rotateY(-90deg) rotateZ(90deg);
-    }
-    33% {
-      transform: rotateY(-90deg) rotateX(90deg);
-    }
-    50% {
-      transform: rotateY(-180deg) rotateZ(90deg);
-    }
-    66% {
-      transform: rotateY(-270deg) rotateX(90deg);
-    }
-    83% {
-      transform: rotateX(90deg);
-    }
+  .face2 {
+    transform: rotateY(90deg) translateZ(100px);
   }
+  .face3 {
+    transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+  }
+  .face4 {
+    transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+  }
+  .face5 {
+    transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+  }
+  .face6 {
+    transform: rotateX(-90deg) translateZ(100px);
+  }
+}
+
+@keyframes spincube {
+  from,
+  to {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  16% {
+    transform: rotateY(-90deg) rotateZ(90deg);
+  }
+  33% {
+    transform: rotateY(-90deg) rotateX(90deg);
+  }
+  50% {
+    transform: rotateY(-180deg) rotateZ(90deg);
+  }
+  66% {
+    transform: rotateY(-270deg) rotateX(90deg);
+  }
+  83% {
+    transform: rotateX(90deg);
+  }
+}

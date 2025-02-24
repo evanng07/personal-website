@@ -4,10 +4,12 @@ import AnimatedLetters from "../AnimatedLetters";
 import "./index.scss";
 import emailjs from "@emailjs/browser";
 import { MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
+import MobileContact from './MobileContact';
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState("text-animate");
   const refForm = useRef();
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 900);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -16,12 +18,21 @@ const Contact = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 900);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        "service_2wf925m",
+        "service_yvo1kuz",
         "template_175d9t5",
         refForm.current,
         "9C5x5G_wF-mbEw27T"
@@ -37,7 +48,7 @@ const Contact = () => {
       );
   };
 
-  return (
+  return isMobile ? <MobileContact /> : (
     <>
       <div className="container contact-page">
         <div className="text-zone">

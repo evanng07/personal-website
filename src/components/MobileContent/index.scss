@@ -1,0 +1,52 @@
+.mobile-container {
+    width: 100%;// Subtract the height of the bottom navigation
+    overflow-y: auto; // Enable scrolling
+    padding: 20px 20px 0 20px; 
+    box-sizing: border-box;
+    position: relative;
+  
+    .mobile-content {
+      padding-bottom: 0px; // Add some space at the bottom
+    }
+  
+    .tags {
+      color: #ffd700;
+      opacity: 0.6;
+      position: relative;
+      bottom: 0;
+      left: 0;
+      font-size: 18px;
+      font-family: 'La Belle Aurore';
+    }
+  
+    .top-tags {
+      bottom: auto;
+      margin-left: -20px;
+    }
+  
+    .bottom-tags {
+      bottom: auto;
+      margin-left: -20px;
+    }
+  
+    .bottom-tag-html {
+      margin-left: -20px;
+    }
+  
+    // Ensure content is visible above the bottom navigation
+    .text-zone {
+      position: relative;
+      padding: 10px;
+      
+      h1 {
+        font-size: 40px; // Slightly smaller for mobile
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+  
+      p {
+        font-size: 13px;
+        margin-bottom: 15px;
+      }
+    }
+  }

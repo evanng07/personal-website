@@ -1,0 +1,155 @@
+.mobile-home-page {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh; // Account for bottom navigation
+  width: 100%; // Ensure full width
+  position: fixed;
+  top: 5%; // Align to top
+  left: 0; // Align to left
+  box-sizing: border-box; // Include padding in width/height calculation
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch; // For smooth scrolling on iOS
+
+  .headshot-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    .headshot {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      animation: fadeIn 1s 2.1s backwards;
+    }
+  }
+
+  .text-zone {
+    text-align: center;
+    width: 100%;
+
+    h1 {
+      color: #fff;
+      font-size: 32px;
+      margin: 0;
+      font-family: "Coolvetica";
+      font-weight: 400;
+      line-height: 1.2;
+      animation: fadeIn 1s 1.4s backwards;
+    }
+
+    h2 {
+      color: #8d8d8d;
+      font-size: 15px;
+      margin-top: 20px;
+      font-weight: 400;
+      font-family: sans-serif;
+      letter-spacing: 3px;
+      animation: fadeIn 1s 1.8s backwards;
+    }
+
+    p {
+      color: #fff;
+      font-size: 14px;
+      font-family: sans-serif;
+      font-weight: 300;
+      margin-top: 20px;
+      padding: 0 20px;
+      animation: fadeIn 1s 2s backwards;
+    }
+  }
+
+  .action-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    animation: fadeIn 1s 2.5s backwards;
+
+    .flat-button,
+    .resume-button {
+      color: #ffd700;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 3px;
+      font-family: sans-serif;
+      text-decoration: none;
+      padding: 8px 15px;
+      border: 1px solid #ffd700;
+      background: transparent;
+      text-align: center;
+      width: auto;
+      max-width: none;
+
+      &:hover {
+        background: #ffd700;
+        color: #333;
+      }
+    }
+  }
+
+  .organizations {
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+
+    h3 {
+      color: #fff;
+      font-size: 18px;
+      margin-bottom: 15px;
+      font-family: "Coolvetica";
+    }
+
+    .org-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 0 10px;
+      overflow: hidden;
+
+      .org-icon {
+        overflow: hidden;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        &.akpsi {
+          scale: 1.3;
+        }
+      }
+    }
+  }
+}
+
+// Additional responsive adjustments for different screen sizes
+@media screen and (max-width: 480px) {
+  .mobile-home-page {
+    .headshot-container .headshot {
+      width: 150px;
+      height: 150px;
+    }
+
+    .text-zone h1 {
+      font-size: 28px;
+    }
+
+    .organizations .org-icons .org-icon {
+      overflow: hidden;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+
+      &.akpsi {
+        scale: 1.3;
+      }
+    }
+  }
+}

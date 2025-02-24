@@ -1,0 +1,245 @@
+.mobile-contact-page {
+  padding: 20px;
+  width: 100%;
+  height: calc(100vh - 60px);
+  position: fixed;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+
+  .text-zone {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    flex-shrink: 0; // Prevents text zone from shrinking
+
+    h1 {
+      color: #ffd700;
+      font-size: 32px;
+      margin-bottom: 15px;
+      font-family: "Coolvetica";
+      white-space: normal;
+      width: 100%;
+      text-align: center;
+    }
+
+    p {
+      color: #fff;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 15px;
+      white-space: normal;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .contact-form {
+    width: 90%;
+    margin: 0 auto;
+    flex-grow: 1; // Allows form to take remaining space
+    display: flex;
+    flex-direction: column;
+
+    form {
+      width: 100%;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+      width: 90%;
+      list-style: none;
+
+      li {
+        padding: 0;
+        margin: 0 0 8px 0;
+        list-style: none;
+        overflow: hidden;
+        display: block;
+        position: relative;
+        opacity: 0;
+        animation: fadeInUp 2s 2s;
+        animation-fill-mode: forwards;
+        clear: both;
+        width: 100%;
+        box-sizing: border-box;
+
+        &.half {
+          width: 49%;
+          margin-left: 2%;
+          float: left;
+          clear: none;
+
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+
+        &:last-of-type {
+          margin-bottom: 60px; // Add space for the bottom nav
+        }
+      }
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      border: 0;
+      background: #115173;
+      height: 50px;
+      font-size: 16px;
+      color: #fff;
+      padding: 0 20px;
+      box-sizing: border-box;
+      border-radius: 4px;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+
+    textarea {
+      width: 100%;
+      border: 0;
+      background: #115173;
+      font-size: 16px;
+      color: #fff;
+      padding: 20px;
+      min-height: 120px;
+      box-sizing: border-box;
+      border-radius: 4px;
+      resize: vertical;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+
+    .flat-button {
+      color: #ffd700;
+      background: transparent;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-decoration: none;
+      padding: 8px 10px;
+      border: 1px solid #ffd700;
+      float: right;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      cursor: pointer;
+
+      &:hover {
+        background: #ffd700;
+        color: #333;
+      }
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mobile-contact-page {
+    padding: 5px;
+
+    .contact-form {
+      width: 90%;
+      margin: 0 auto;
+      padding: 0;
+
+      ul {
+        width: 90%;
+
+        li {
+          width: 90%;
+          margin: 0 0 10px 0;
+
+          &.half {
+            width: 90%;
+            margin-left: 0;
+            float: none;
+          }
+
+          input[type="text"],
+          input[type="email"],
+          textarea {
+            width: 90%;
+          }
+          &:last-of-type {
+            padding-right: 5%;
+          }
+        }
+
+        // li:last-child {
+        //   width: 90%;
+
+        //   .flat-button {
+        //     float: right;
+        //     margin-bottom: 60px;
+        //   }
+        // }
+      }
+    }
+  }
+}
+
+// Height-based media queries
+@media screen and (min-height: 700px) {
+  .mobile-contact-page {
+    .text-zone {
+      margin-bottom: 25px;
+      
+      h1 {
+        margin-bottom: 20px;
+      }
+    }
+
+    .contact-form {
+      textarea {
+        min-height: 150px;
+      }
+
+      ul li {
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-height: 800px) {
+  .mobile-contact-page {
+    .text-zone {
+      margin-bottom: 30px;
+    }
+
+    .contact-form {
+      textarea {
+        min-height: 180px;
+      }
+
+      ul li {
+        margin: 0 0 12px 0;
+      }
+    }
+  }
+}
