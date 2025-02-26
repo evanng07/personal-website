@@ -4,6 +4,7 @@ import Loader from "react-loaders";
 import Card from "./Card.js";
 import "./index.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from '@fortawesome/free-brands-svg-icons'; 
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import ProperIcon from "../../../src/assets/images/prop-er.jpeg";
 import ITMIcon1 from "../../../src/assets/images/ITM1.png";
@@ -13,6 +14,7 @@ import PersonalLibraryIcon from "../../../src/assets/images/PersonalLibrary.png"
 import YourPlacesIcon from "../../../src/assets/images/YourPlaces.png";
 import HowdyFFIcon from "../../../src/assets/images/howdyff.png";
 import CanCareIcon from "../../../src/assets/images/CanCareIcon.png";
+import CodeInsight from "../../../src/assets/images/CodeInsight.png";
 import MobileProjects from "./MobileProjects";
 
 const Projects = () => {
@@ -22,10 +24,18 @@ const Projects = () => {
 
   const projects = [
     {
+      image: CodeInsight,
+      name: "CodeInsight",
+      date: "Won Best Code Analysis Application @ Treehacks 2025",
+      tech: "Flask, Groq, Mistral, D3.js",
+      link: "https://github.com/evanng07/CodeInsight"
+    },
+    {
       image: ProperIcon,
       name: "Prop-er",
-      date: "March 2024 - Present",
+      date: "Mar 2024 - Present",
       tech: "React, Python, Flask, NBA API, TailwindCSS",
+      link: "https://github.com/loknara/Prop-er"
     },
     {
       image: [ITMIcon1, ITMIcon2, ITMIcon3],
@@ -33,30 +43,35 @@ const Projects = () => {
       date: "Feb 2023 - May 2023",
       tech: "React Native, MongoDB Realm, Figma",
       isMultiImage: true,
+      link: "https://github.com/acm-projects/In-the-Moment"
     },
     {
       image: CanCareIcon,
       name: "CanCare - Code For Good Project",
-      date: "October 14, 2023",
+      date: "Oct 14, 2023",
       tech: "Vite, React, MongoDB Atlas, Express, Node",
+      link: "https://github.com/cfgtexas23/Team-3"
     },
     {
       image: PersonalLibraryIcon,
       name: "GreatBooks",
-      date: "June 2022 - December 2022",
+      date: "Jun 2022 - Dec2022",
       tech: "React, Firebase, Google Books API",
+      link: "https://github.com/evanng07/PersonalLibrary"
     },
     {
       image: YourPlacesIcon,
       name: "YourPlaces",
-      date: "December 2022 - February 2023",
+      date: "Dec 2022 - Feb 2023",
       tech: "MongoDB, ExpressJS, ReactJS, NodeJS",
+      link: "https://github.com/evanng07/YourPlaces"
     },
     {
       image: HowdyFFIcon,
       name: "Fantasy Football League Stats",
-      date: "August 2023",
+      date: "Aug 2023",
       tech: "Jupyter Notebook, Python, Google Sheets",
+      link: "https://github.com/evanng07/howdy_league_ff_draft_stats"
     },
   ];
 
@@ -142,6 +157,11 @@ const Projects = () => {
             <p className="tech">
               Technologies: {projects[currentProject].tech}
             </p>
+            
+            {/* GitHub Icon Link */}
+            <a href={projects[currentProject].link} target="_blank" rel="noopener noreferrer" className="github-link">
+              <FontAwesomeIcon icon={faGithub} className="github-icon" />
+            </a>
           </div>
 
           <div className="navigation">

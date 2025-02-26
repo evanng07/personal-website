@@ -1,10 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Headshot from '../../assets/images/headshot.png';
-import AKPSI from '../../assets/images/akpsi.png';
-import HackUTD from '../../assets/images/hackutd.png';
-import JPMorgan from '../../assets/images/jpmorgan-icon.png';
-import EvanNgoResume from '../../assets/images/EvanNgoResume.pdf';
+import EvanNgoResume from '../../assets/images/EvanNgoResumeV2.pdf';
 import './MobileHome.scss';
 
 const MobileHome = () => {
@@ -32,15 +29,6 @@ const MobileHome = () => {
           DOWNLOAD RESUME
         </a>
       </div>
-
-      {/* <div className="organizations">
-        <h3>Organizations</h3>
-        <div className="org-icons">
-          <img src={AKPSI} alt="Alpha Kappa Psi" className="org-icon akpsi" />
-          <img src={HackUTD} alt="HackUTD" className="org-icon" />
-          <img src={JPMorgan} alt="JP Morgan" className="org-icon" />
-        </div>
-      </div> */}
     </div>
   );
 };

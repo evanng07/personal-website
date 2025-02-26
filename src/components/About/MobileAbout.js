@@ -124,28 +124,28 @@ const MobileAbout = () => {
         <h2>Connect With Me</h2>
         <div className="social-links">
           <a 
-            href="https://github.com/evanngo" 
+            href="https://github.com/evanng07" 
             target="_blank" 
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faGithub} color="#fff" />
           </a>
           <a 
-            href="https://twitter.com/evanngo" 
+            href="https://twitter.com/EvanNg07" 
             target="_blank" 
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faTwitter} color="#1DA1F2" />
           </a>
           <a 
-            href="https://linkedin.com/in/evanngo" 
+            href="https://www.linkedin.com/in/evan-ngo/" 
             target="_blank" 
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faLinkedin} color="#0077B5" />
           </a>
           <a 
-            href="https://instagram.com/evanngo" 
+            href="https://www.instagram.com/evango07/" 
             target="_blank" 
             rel="noopener noreferrer"
           >

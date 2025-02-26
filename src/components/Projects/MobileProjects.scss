@@ -13,11 +13,11 @@
     width: 100%;
     text-align: center;
     margin-bottom: 30px;
-    
+
     h1 {
       color: #ffd700;
       font-size: 32px;
-      font-family: 'Coolvetica';
+      font-family: "Coolvetica";
       margin-bottom: 20px;
       text-align: center;
     }
@@ -31,7 +31,6 @@
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-
     .project-image {
       width: 100%;
       height: auto;
@@ -72,6 +71,16 @@
       line-height: 1.5;
       text-align: center;
     }
+    .github-link {
+      position: relative; // Position it absolutely within the card
+      color: #ffd700; // Icon color
+      font-size: 24px; // Icon size
+      transition: color 0.3s; // Smooth color transition
+
+      &:hover {
+        color: #fff; // Change color on hover
+      }
+    }
   }
 
   .navigation {
@@ -103,9 +112,9 @@
     .project-counter {
       color: #fff;
       font-size: 16px;
-      font-family: 'Coolvetica';
+      font-family: "Coolvetica";
       min-width: 60px;
       text-align: center;
     }
   }
-} 
+}
