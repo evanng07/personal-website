@@ -41,6 +41,30 @@ body {
       .icon {
         padding: 0 10px;
       }
+
+      a.mobile-home-link::after {
+        left: 0;
+        content: "HOME";
+      }
+    
+      a.mobile-about-link::after {
+        content: "ABOUT";
+      }
+    
+      a.mobile-contact-link::after {
+        left: -10px;
+        content: "CONTACT";
+      }
+    
+      a.mobile-projects-link::after {
+        left: -10px;
+        content: "PROJECTS";
+      }
+    
+      a.mobile-experiences-link::after {
+        left: -20px;
+        content: "EXPERIENCES";
+      }
     }
 
     // Adjust social links for mobile
@@ -134,8 +158,6 @@ nav {
   }
 
   a.home-link::after {
-    align-items: center;
-    justify-content: center;
     content: "HOME";
   }
 

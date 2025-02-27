@@ -34,23 +34,23 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
     <nav className="mobile-navbar">
       
       
-      <NavLink exact="true" to="/about" className="about-link icon">
+      <NavLink exact="true" to="/about" className="mobile-about-link icon">
         <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
       </NavLink>
       
-      <NavLink exact="true" to="/projects" className="projects-link icon">
+      <NavLink exact="true" to="/projects" className="mobile-projects-link icon">
         <FontAwesomeIcon icon={faFolder} color="#4d4d4e" />
       </NavLink>
 
-      <NavLink exact="true" to="/home" className="home-link icon">
+      <NavLink exact="true" to="/home" className="mobile-home-link icon">
         <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
       </NavLink>
       
-      <NavLink exact="true" to="/experiences" className="experiences-link icon">
+      <NavLink exact="true" to="/experiences" className="mobile-experiences-link icon">
         <FontAwesomeIcon icon={faBriefcase} color="#4d4d4e" />
       </NavLink>
       
-      <NavLink exact="true" to="/contact" className="contact-link icon">
+      <NavLink exact="true" to="/contact" className="mobile-contact-link icon">
         <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
       </NavLink>
     </nav>
